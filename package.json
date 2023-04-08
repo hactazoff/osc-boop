@@ -1,0 +1,22 @@
+{
+  "name": "osc-boop",
+  "version": "1.0.0",
+  "description": "Compteur de touchés sur un avatar VRChat par OSC.",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "osc-boop"
+  },
+  "keywords": [
+    "osc",
+    "vrchat",
+    "counter",
+    "avatar",
+    "hactazia"
+  ],
+  "author": "Hactazia",
+  "license": "ISC"
+}
