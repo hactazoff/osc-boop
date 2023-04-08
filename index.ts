@@ -4,11 +4,11 @@ import { readFileSync, stat, writeFileSync } from 'fs';
 
 const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 
-interface StatsList { [index: string]: Stats };
-interface RawStats { [index: string]: string };
-interface Stats { local_count: bigint, last_update: Date, active_value: boolean, live_count: bigint };
-interface OutEvent { name: string, time: Date };
-interface InEvent extends OutEvent { type: "OUT" | "IN" | "SUCCESS" | "REFUSE" | "OFFLINE" };
+interface StatsList { [index: string]: Stats }
+interface RawStats { [index: string]: string }
+interface Stats { local_count: bigint, last_update: Date, active_value: boolean, live_count: bigint }
+interface OutEvent { name: string, time: Date }
+interface InEvent extends OutEvent { type: "OUT" | "IN" | "SUCCESS" | "REFUSE" | "OFFLINE" }
 
 export class OSCBOOP {
     constructor(config: any) {
@@ -73,11 +73,11 @@ export class OSCBOOP {
         return Object.keys(this.config.PARAMETER_NAMES)
     }
     public parseParameter(name: string, type: string) {
-        return config.PARAMETER_SCHEMATIC.replace('{TYPE}', this.config.PARAMETER_TYPES[type]).replace('{NAME}', this.config.PARAMETER_NAMES[name])
+        return this.config.PARAMETER_SCHEMATIC.replace('{TYPE}', this.config.PARAMETER_TYPES[type]).replace('{NAME}', this.config.PARAMETER_NAMES[name])
     };
 
     private _ready(): void {
-        this.server.on('message', msg => this._onMessage(msg[0], msg[1]));
+        this.server.on('message', (msg: any[]) => this._onMessage(msg[0], msg[1]));
         setInterval(() => this.sendChatbox(), 1e4);
         setInterval(() => this.save(), 36e4);
     }
@@ -135,7 +135,7 @@ export class OSCBOOP {
             const response = await request(this.config.URL_SERVER + '/api/add', {
                 method: 'POST',
                 headers: {
-                    'Token': config.TOKEN_SERVER,
+                    'Token': this.config.TOKEN_SERVER,
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
