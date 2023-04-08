@@ -1,0 +1,59 @@
+{
+    "ADDRESS_SENDING": "127.0.0.1",
+    "PORT_SENDING": 9000,
+
+    "ADDRESS_LISTENING": "0.0.0.0",
+    "PORT_LISTENING": 9001,
+    "PORT_LISTENING_TRY": 10,
+    "PORT_LISTENING_DELAI_RETRY": 10000,
+
+    "ENABLE_CHATBOX": true,
+
+    "PARAMETER_TYPES": {
+        "OUT": "3",
+        "IN": "Contact",
+        "SUCCESS": "1",
+        "REFUSE": "0",
+        "OFFLINE": "1"
+    },
+
+    "PARAMETER_SCHEMATIC" : "/avatar/parameters/{TYPE}/{NAME}",
+
+    "PARAMETER_NAMES": {
+        "HEADPAT_HAND": "Purr/Hand",
+        "HEADPAT_FEET": "Purr/Feet",
+
+        "NOSEBOOP_HAND": "Nose/Hand",
+        "NOSEBOOP_FEET": "Nose/Feet",
+        "NOSEBOOP_HEAD": "Mouth",
+
+        "ASSFLAP_HAND": "Butt/Hand",
+        "ASSFLAP_FEET": "Butt/Feet",
+        "ASSFLAP_HEAD": "Butt/Head",
+
+        "BOOBPRESS_HAND": "Breast/Hand",
+        "BOOBPRESS_FEET": "Breast/Feet",
+        "BOOBPRESS_HEAD": "Breast/Head"
+    },
+
+    "PARAMETER_DISPLAY_NAMES": {
+        "HEADPAT_HAND": "Patpats",
+        "HEADPAT_FEET": "Masochistes",
+
+        "NOSEBOOP_HAND": "Boop",
+        "NOSEBOOP_FEET": "Fétichistes",
+        "NOSEBOOP_HEAD": "Bisous",
+
+        "ASSFLAP_HAND": "Claques aux fesses",
+        "ASSFLAP_FEET": "Spartiats",
+        "ASSFLAP_HEAD": "Balade gourmande",
+
+        "BOOBPRESS_HAND": "Boobs",
+        "BOOBPRESS_FEET": "Pantouflards",
+        "BOOBPRESS_HEAD": "Paradis"
+    },
+
+    "TOKEN_SERVER": "testtesttesttest",
+    "URL_SERVER": "http://localhost:3001",
+    "LOCAL_STATS_FILE": "./localstats.json"
+}
