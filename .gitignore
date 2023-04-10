@@ -130,3 +130,4 @@ out
 localstats.json
 package-lock.json
 osc-boop.code-workspace
+current_sha.txt
